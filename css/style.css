@@ -1,0 +1,547 @@
+@font-face {font-family: "Segoe Print"; 
+	src: url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.eot"); 
+	src: url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.eot?#iefix") format("embedded-opentype"), 
+	url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff2") format("woff2"), 
+	url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.woff") format("woff"), 
+	url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.ttf") format("truetype"), 
+	url("//db.onlinewebfonts.com/t/c455d94eee43dc4ceeb83c0c0fd0d4c8.svg#Segoe Print") format("svg"); 
+}
+
+* {
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 90px 20px 0;
+    font-family: 'segoepr';
+}
+
+a {
+	font-family: 'segoepr';
+	padding: 0px 20px 0;
+}
+
+.container-nav {
+	width:100%;
+	background-color: white;
+	height: 85px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.nav-link {
+	color: #A90000;
+	text-decoration: none;
+}
+
+.logo img {
+  object-fit: contain; /* Agregamos objeto-fit */
+  /* filter: drop-shadow( 0 0 2px rgb(236, 11, 11)); */
+}
+
+.logo {
+	padding: 10px 40px;
+	object-fit: contain;
+	line-height: 80px;
+	width: 40px;
+	transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+	transform: scale(1.1);
+	transform-origin: center; /* Agregamos origen de transformación */
+  }
+
+.nav-menu {
+	display: flex;
+	margin-right: 100px;
+	list-style: none;
+	padding: 0;
+}
+
+.nav-menu-item {
+	position: relative;
+	font-size: 22px;
+	margin-right: 0 10px;
+	line-height: 80px;
+	width: max-content;
+}
+
+.nav-menu-link,
+.nav-sub-menu-link {
+	padding: 8px 12px;
+	text-decoration: none;
+}
+  
+.nav-menu-link:hover,
+.nav-menu-link_active {
+	background-color: #A90000;
+	color: white;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.nav-submenu {
+    display: none; /* Oculta la sublista por defecto */
+	position: absolute;
+	width: max-content;
+    position: absolute; /* Posiciona la sublista de manera que se sobreponga */
+	top: 50%; /* Coloca la sublista justo debajo del elemento padre */
+    left: 0; /* Alinea la sublista con el borde izquierdo del elemento padre */
+    list-style: none;
+	background-color: #A90000;
+	color: white;
+	border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    z-index: 10; /* Asegura que la sublista esté por encima de otros elementos */
+}
+
+.nav-menu-item:hover .nav-submenu {
+    display: block; /* Muestra la sublista al pasar el mouse */
+}
+
+.nav-submenu-item {
+    position: relative;
+	font-size: 22px;
+	margin-right: 0 10px;
+	line-height: 40px;
+	width: max-content;
+}
+
+.nav-menu-sub-item {
+	position: relative;
+	font-size: 17px;
+	color: white;
+	margin-right: 0 10px;
+	line-height: 30px;
+	width: max-content;
+}
+
+/* Estilo de los enlaces de la sublista */
+.nav-submenu-item a {
+	padding: 8px 12px;
+	border-radius: 3px;
+	text-decoration: none;
+	color: white; /* Texto blanco para los ítems de la sublista */
+	display: block; /* Hace que el enlace ocupe el ancho completo del ítem */
+}
+
+/* Estilo del enlace de la sublista cuando se pasa el mouse */
+.nav-submenu-item a:hover {
+	list-style: none;
+	background-color: #900000; /* Un tono más oscuro para el fondo en hover */
+}
+
+
+  /* TOGGLE */
+.nav-toggle {
+	color: white;
+	background: none;
+	border: none;
+	font-size: 40px;
+	padding: 5px 20px 35px;
+	line-height: 85px;
+	cursor: pointer;
+	display: none;
+}
+
+.main-container {
+	width: 100%;
+	margin: auto;
+}
+
+section {
+	display: block;
+	position: relative;
+	width: auto;	
+}
+
+.seccion {
+	padding-top: 550px;
+    padding-bottom: 60px;
+	width: 100%;
+	height: auto;
+}
+
+/* #inicio {
+
+} */
+
+.fondo {
+
+	display: inline-flex;
+	position: absolute;
+	align-items: center;
+	width: 97%;
+	height: 85%;
+    background-repeat: no-repeat;
+    background-position: center;	
+}
+
+/* SLIDE */
+.img-slide {
+	max-width: 1250px;
+	height: 550px;
+	display: block;
+	object-fit: cover;
+} 
+/* cajon del titulo y el slide */
+.caption {
+	position: absolute;
+	top: 15%;
+	left: 8rem;
+	z-index: 9;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: 500ms ease opacity, 500ms ease transform;
+	transform: translateY(60px);	
+}
+
+.caption.current-caption {
+	transition-delay: 1000ms;
+	opacity: 1;
+	transform: translateY(0);	
+}
+
+.caption.previous-caption {
+	transform: translateY(-60px);
+}
+/* tiutlo */
+.caption .caption-heading {
+	transition: 500ms ease-in all;	
+}
+/* Letra los titulos */
+.caption .caption-heading h1 {
+	font-size: 4rem;
+	margin-bottom: 1.5rem;
+	margin-right: 10px;
+	/* text-transform: uppercase; */
+	text-indent: -0.2rem;
+	letter-spacing: 0.2rem;
+	font-weight: 300;
+	color: #A90000;
+}
+/* Letra de los slide */
+.caption .caption-subhead {
+	font-size: 1rem;
+	font-weight: 300;
+	/* text-transform: uppercase; */
+	color: #fcf9f9;
+	letter-spacing: 4px;
+	word-spacing: 0.1rem;
+	margin-bottom: 2.5rem;
+	display: block;
+}
+
+/* .caption a.btn {
+	color: #fc0202;
+	font-size: 0.8rem;
+	text-decoration: none;
+	background-color: white;
+	padding: 0.5rem 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	position: relative;
+	z-index: 9;
+	transition: 250ms ease-in background-color, 500ms ease-in color;
+}
+
+.caption a.btn:hover {
+	background-color: #f80606;
+	color: white;
+} */
+  
+.container {
+	width: 100%;
+	height: 100hv;
+	padding-top: 5px;
+	display: flex;
+	position: absolute;
+	align-content: center;
+	margin-left: 50px;
+}
+  
+.left-col, .right-col {
+	width: 100%;
+	box-sizing: border-box;
+	height: calc(100% - 4rem);
+	overflow: hidden;
+}
+  
+.left-col {
+	background-size: cover;
+	background: postion center top;
+	overflow: hidden;
+	margin: 2rem;
+	position: relative;
+}
+
+.left-col .slide {
+	filter: grayscale(50%);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: left top !important;
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	opacity: 0;
+	transition: 1000ms cubic-bezier(1, 0.04, 0.355, 1) transform, 1000ms cubic-bezier(0.68, -0.55, 0.265, 1.55) clip-path;
+	transform: translateY(-100%);
+	scale: 1;
+	z-index: -1;
+}
+
+.left-col .slide.previous {
+	z-index: 1;
+	opacity: 1;
+	transform: translateY(0);
+	animation-delay: 1s;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+	transition: 3s ease transform;
+	will-change: transform;
+}
+
+.left-col .slide.previous.change {
+	transform: translateY(50%);
+}
+
+.left-col .slide.next {
+	transform: translateY(-100%);
+	z-index: 3;
+	opacity: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.left-col .slide.current {
+	opacity: 1;
+	transform: translateY(0) scale(1.25);
+	z-index: 2;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+  
+.right-col {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+  
+.right-col .preview {
+	max-width: 400px;
+}
+  
+.nav-slide {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: -10px;
+	width: 100%;
+	height: 100%;
+	z-index: 6;
+	overflow: hidden;
+}
+/* botones de navegacion */
+.nav-slide a {
+	color: #A90000;
+	font-size: 3rem;
+	text-shadow: 1px 1px 4px rgba(241, 7, 7, 0.4);
+}
+
+.nav-slide:hover .slide-up, 
+.nav-slide:hover .slide-down {
+	opacity: 0.5;
+	transform: translateX(0);
+}
+
+.nav-slide .slide-up, .nav-slide .slide-down {
+	display: block;
+	position: absolute;
+	text-align: center;
+	padding: 1rem;
+	opacity: 0;
+	transition: 0.25s ease opacity, 0.25s ease transform;
+	z-index: 99;
+}
+
+.nav-slide .slide-up:hover, .nav-slide .slide-down:hover {
+	opacity: 1;
+}
+
+.nav-slide .slide-up a, .nav-slide .slide-down a {
+	text-decoration: none;
+	font-weight: 300 !important;
+}
+
+.nav-slide .slide-up {
+	top: 50%;
+	left: 0;
+	transform: translateX(-1100%);
+}
+
+.nav-slide .slide-down {
+	top: 50%;
+	right: 0;
+	transform: translateX(200%);
+}
+
+/* FIN SLIDE */
+
+/*cards*/
+
+.cards3 {
+	position: relative;
+	padding-top: 500px;
+}
+
+.cards {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	background-color: #fff;
+
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px;
+	width: 250px;
+	position: relative; /* Necesario para el pseudo-elemento */
+}
+
+.card p {
+	font-size: 16px;
+	font-weight: bold;
+	color: #A90000;
+}
+
+/* Pseudo-elemento para el borde derecho e inferior */
+.card::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 80%;
+	border-right: 5px solid #A90000; /* Borde derecho */
+	border-bottom: 5px solid #A90000; /* Borde inferior */
+	border-radius: 0 0 10px 0; /* Rango del borde redondeado */
+	pointer-events: none; /* Para evitar interferir con los clics en la tarjeta */
+}
+
+/* seccion ministerios */
+
+.cardMin {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+	text-align: justify;
+    max-width: 90%; /* Ajusta el ancho máximo */
+    display: flex;
+    flex-direction: column;
+	margin-left: 5%;
+	margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center; /* Alineación vertical */
+}
+
+.card-image {
+    width: 20%; /* Ancho de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-right: 16px; /* Espacio entre la imagen y el texto */
+}
+
+.card-text {
+    flex: 1; /* Ocupa el resto del espacio disponible */
+}
+
+.event-date {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/*  */
+
+/* MOBILE */
+@media (max-width: 1024px) {
+	body {
+	  width: 100%;
+	  padding-top: 50px;
+	}
+  
+	.container-nav {
+	  height: 85px;
+	}
+
+	.logo {
+		width: 50%;
+		height: 50%;
+	}
+  
+	.nav-menu {
+	  flex-direction: column;
+	  align-items: center;
+	  margin: 0;
+	  background-color: #A90000;
+	  position: fixed;
+	  top: 85px;
+	  width: 100%;
+	  padding: 20px 0;
+  
+	  height: calc(100% - 60px);
+	  overflow-y: auto;
+  
+	  left: 100%;
+	  transition: left 0.3s;
+	}
+  
+	.nav-menu-item {
+	  line-height: 70px;
+	}
+  
+	.nav-menu-link:hover,
+	.nav-menu-link_active {
+		background-color: #A90000;
+	  	color: #fdfbfb;
+	}
+  
+	.nav-toggle {
+	  display: block;
+	}
+  
+	.nav-menu_visible {
+	  left: 0;
+	}
+  
+	.nav-toggle:focus:not(:focus-visible) {
+	  outline: none;
+	}
+}
+
+/* Mobil Slider */
+
+
+
+

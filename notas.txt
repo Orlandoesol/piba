@@ -1,0 +1,132 @@
+<section id="piba" class="seccion">
+            <div class="container-nos">
+                <div class="container">
+                    <div class="row">
+                        <div class="columna columna-33 columna-mobile-100">
+                            <div class="bloque-servicio">
+                                <div class="bloque-img-servicio">
+                                    <img src="img/servicio1.jpg" alt="">
+                                </div>
+                                <div class="bloque-contenido-servicio">
+                                    <h3>Quienes somos</h3>
+                                    <p>  Nosotros somos un grupo de personas que hemos encontrado en Dios, el sentido de la vida. 
+                                        Ahora caminamos diariamente de su mano y así estamos mejorando nuestra relación con nosotros mismos y con los demás.
+ 
+                                        Lo que creemos:
+                                        
+                                        1.      En el Dios trino (Padre, Hijo Espíritu Santo) como único y verdadero Dios.
+                                        
+                                        2.      En que todas las cosas existen por El, en El y para El.
+                                        
+                                        3.      En su amor para todo el mundo, manifestado al enviar a su Hijo a morir por nuestros pecados.
+                                        
+                                        4.      En que somos pecadores, pero podemos ser perdonados por Dios al confiar en su amor.
+                                        
+                                        5.      En que Dios nos creó para ser amados por El, para amarle a El y a lo que El ama. 
+                                                  Y es esta la clave de la vida.
+                                        
+                                        6.      En que la iglesia es su cuerpo y familia, llamada a ser su reflejo.
+                                        
+                                        7.      En que existiremos eternamente, para muerte o vida, según nuestra fe.</p>
+                                        <a href="#" class="boton boton-blanco">Ver mas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columna columna-33 columna-mobile-100">
+                            <div class="bloque-servicio">
+                                <div class="bloque-img-servicio">
+                                    <img src="img/servicio2.jpg" alt="">
+                                </div>
+                                <div class="bloque-contenido-servicio">
+                                    <h3>Historia</h3>
+                                    <p></p>
+                                        <a href="#" class="boton boton-blanco">Ver mas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columna columna-33 columna-mobile-100">
+                            <div class="bloque-servicio">
+                                <div class="bloque-img-servicio">
+                                    <img src="img/servicio3.jpg" alt="">
+                                </div>
+                                <div class="bloque-contenido-servicio">
+                                    <h3>Nuestro Proposito</h3>
+                                    <p> Hasta hace poco contábamos con una misión y con una visión, pero en un proceso de simplificación 
+                                        para alcanzar mayor efectividad en nuestro ministerio unificamos ambas ideas en una sola que parte del pasaje de Marcos 12:29-31
+
+                                        Mar 12:29  Jesús le respondió:  El primer mandamiento de todos es: 
+                                        Oye,  Israel;  el Señor nuestro Dios,  el Señor uno es.
+                                        
+                                        Mar 12:30  Y amarás al Señor tu Dios con todo tu corazón,  y con toda tu alma, 
+                                        y con toda tu mente y con todas tus fuerzas.  Este es el principal mandamiento.
+                                        
+                                        Mar 12:31  Y el segundo es semejante:  Amarás a tu prójimo como a ti mismo. 
+                                        No hay otro mandamiento mayor que éstos.
+                                        
+                                        Cuando preguntan a Jesús cuál era el principal mandamiento; Jesús no dijo cual era el principal, 
+                                        si no que más bien los resumió todos en uno solo, que era amar a Dios con todo el ser; 
+                                        luego añadió otro que era amar al prójimo. En esto se resume todo lo que Dios espera del ser humano.
+                                        
+                                        A partir de esta enseñanza creemos que nuestra definición de propósito se sintetiza en la siguiente frase:
+                                        
+                                        Transformar el Quindío en un pueblo que ame a Dios y lo que él ama.
+                                         
+                                        Cómo lo lograremos
+                                         
+                                        Conectándonos con Dios y su Familia.
+                                        Lo haremos conéctandonos diariamente con Dios y en las celebraciones dominicales. También con su familia a 
+                                        través del compañerismo en los grupos de Conexión.
+                                        
+                                        Creciendo hasta ser como Jesús.
+                                        Lo haremos creciendo en nuestra semejanza con Cristo, a través de la RED discípular y el ciclo de Adiestramiento y Formación Espiritual (C.A.F.E.)
+                                        
+                                        
+                                        Sirviendo a otros.
+                                        Lo haremos Sirviendo a otros a través de un ministerio, y sembrando la semilla del evangelio, en quienes no lo conocen.
+                                        
+                                        La iglesia que queremos ser
+                                        Queremos ser una iglesia…
+                                        
+                                        Con gente apasionada por Dios.
+                                        Donde las personas se amen unas a otras como Dios las ama a ellas.
+                                        Con personas creciendo continuamente en su semejanza con Cristo.
+                                        Con muchas manos extendidas para servir.
+                                        Que anuncia el amor de Dios en todo lugar y momento.
+                                        Donde los corazones son sanados.
+                                        Con una sana fundamentación bíblica.
+                                        Abierta al mover espiritual y sobrenatural de Dios.
+                                        Guiada por Dios.
+                                        Vanguardista.
+                                        Con gente que disfruta la vida.
+                                        Que cambia su mundo.
+                                        … en la cual Dios se deleite.  </p>
+                                        <a href="#" class="boton boton-blanco">Ver mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <section id="estaciones" class="seccion">
+            <div class="grid-container">
+                <div class="grid-item"><a href="#"><img src="./icon/conectate11.png" alt="Conectate"></a></div>
+                <div class="grid-item"><a href="#"><img src="./icon/crece11.png" alt="Crece"></a></div>
+                <div class="grid-item"><a href="#"><img src="./icon/sirve11.png" alt="Sirve"></a></div>
+                <div class="grid-item"><a href="#"><img src="./icon/face.png" alt=""></a></div>
+                <div class="grid-item"><a href="#"><img src="./icon/face.png" alt=""></a></div>
+                <div class="grid-item"><a href="#"><img src="./icon/face.png" alt=""></a></div>
+            </div> 
+        </section>
+        <section id="compasion" class="seccion">
+
+        </section>
+        <section id="noticias" class="seccion">
+
+        </section>
+        <section id="recursos" class="seccion">
+
+        </section>
+        <section id="contactenos" class="seccion">
+
+        </section>
